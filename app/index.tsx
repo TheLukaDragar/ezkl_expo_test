@@ -10,7 +10,6 @@ import LocalSimpleMemory from './sources/Local.SimpleMemory.wasm';
 import { useWasmCircomRuntime, useWasmHelloWorld } from './hooks';
 import { fetchWasm } from './utils';
 
-import engine from '@ezkljs/engine'
 
 
 export default function App() {
