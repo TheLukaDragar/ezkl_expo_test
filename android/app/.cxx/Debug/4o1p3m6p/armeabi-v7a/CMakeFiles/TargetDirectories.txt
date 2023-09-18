@@ -1,0 +1,15 @@
+/Users/carbs/Desktop/testtt/my-app/android/app/.cxx/Debug/4o1p3m6p/armeabi-v7a/CMakeFiles/appmodules.dir
+/Users/carbs/Desktop/testtt/my-app/android/app/.cxx/Debug/4o1p3m6p/armeabi-v7a/CMakeFiles/edit_cache.dir
+/Users/carbs/Desktop/testtt/my-app/android/app/.cxx/Debug/4o1p3m6p/armeabi-v7a/CMakeFiles/rebuild_cache.dir
+/Users/carbs/Desktop/testtt/my-app/android/app/.cxx/Debug/4o1p3m6p/armeabi-v7a/rngesturehandler_codegen_autolinked_build/CMakeFiles/react_codegen_rngesturehandler_codegen.dir
+/Users/carbs/Desktop/testtt/my-app/android/app/.cxx/Debug/4o1p3m6p/armeabi-v7a/rngesturehandler_codegen_autolinked_build/CMakeFiles/edit_cache.dir
+/Users/carbs/Desktop/testtt/my-app/android/app/.cxx/Debug/4o1p3m6p/armeabi-v7a/rngesturehandler_codegen_autolinked_build/CMakeFiles/rebuild_cache.dir
+/Users/carbs/Desktop/testtt/my-app/android/app/.cxx/Debug/4o1p3m6p/armeabi-v7a/safeareacontext_autolinked_build/CMakeFiles/react_codegen_safeareacontext.dir
+/Users/carbs/Desktop/testtt/my-app/android/app/.cxx/Debug/4o1p3m6p/armeabi-v7a/safeareacontext_autolinked_build/CMakeFiles/edit_cache.dir
+/Users/carbs/Desktop/testtt/my-app/android/app/.cxx/Debug/4o1p3m6p/armeabi-v7a/safeareacontext_autolinked_build/CMakeFiles/rebuild_cache.dir
+/Users/carbs/Desktop/testtt/my-app/android/app/.cxx/Debug/4o1p3m6p/armeabi-v7a/rnscreens_autolinked_build/CMakeFiles/react_codegen_rnscreens.dir
+/Users/carbs/Desktop/testtt/my-app/android/app/.cxx/Debug/4o1p3m6p/armeabi-v7a/rnscreens_autolinked_build/CMakeFiles/edit_cache.dir
+/Users/carbs/Desktop/testtt/my-app/android/app/.cxx/Debug/4o1p3m6p/armeabi-v7a/rnscreens_autolinked_build/CMakeFiles/rebuild_cache.dir
+/Users/carbs/Desktop/testtt/my-app/android/app/.cxx/Debug/4o1p3m6p/armeabi-v7a/RNWebassemblySpec_autolinked_build/CMakeFiles/react_codegen_RNWebassemblySpec.dir
+/Users/carbs/Desktop/testtt/my-app/android/app/.cxx/Debug/4o1p3m6p/armeabi-v7a/RNWebassemblySpec_autolinked_build/CMakeFiles/edit_cache.dir
+/Users/carbs/Desktop/testtt/my-app/android/app/.cxx/Debug/4o1p3m6p/armeabi-v7a/RNWebassemblySpec_autolinked_build/CMakeFiles/rebuild_cache.dir
