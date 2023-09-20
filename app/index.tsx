@@ -6,9 +6,10 @@ import * as WebAssembly from 'react-native-webassembly';
 import LocalHello from './sources/Local.Hello.wasm';
 import LocalEzkl from './sources/ezkl_bg.wasm';
 
-import { __wbg_get_imports, poseidonHash, setWasm,init_panic_hook,init_logger } from './sources/ezkl.js';
+import { __wbg_get_imports, init_logger, init_panic_hook, poseidonHash, setWasm } from './sources/ezkl.js';
 
 import { useWasmCircomRuntime, useWasmHelloWorld } from './hooks';
+import {useWasmEZKLRuntime} from './hooks/useWasmEZKLRuntime';
 
 
 
@@ -20,6 +21,8 @@ export default function App() {
 
   const { calculateWTNSBin, error: circomError } = useWasmCircomRuntime();
 
+  const { test: test,get_poseidonHash, error: er } = useWasmEZKLRuntime();
+
   /* Hook I/O. */
   React.useEffect(
     () => void (helloWorldError && console.error(helloWorldError)),
@@ -30,6 +33,11 @@ export default function App() {
   React.useEffect(
     () => void (circomError && console.error(circomError)),
     [circomError]
+  );
+
+  React.useEffect(
+    () => void (er && console.error(er)),
+    [er]
   );
 
   /* Add. */
@@ -219,9 +227,11 @@ export default function App() {
       />
 
       <Button
-        title='ALERT'
+        title='TEST'
         onPress={() => {
-          alert("ezkl");
+          console.log(test(1));
+          get_poseidonHash(new Uint8ClampedArray(10));
+
         }}
       />
 
@@ -243,7 +253,7 @@ export default function App() {
 
             let imports: any = __wbg_get_imports();
             console.log("imports", imports);
-            imports.wbg.memory = new WebAssembly.Memory({initial:1245192*2});
+            imports.wbg.memory = new WebAssembly.Memory({ initial: 1245192 * 2 });
             // __wbg_init_memory(imports, new WebAssembly.Memory({ initial: 65536 })); //new WebAssembly.Memory({initial:20,maximum:65536,shared:true});
 
             console.log("imports2", imports.wbg.__wbg_log_53ed96ea72ace5e9.toString());
