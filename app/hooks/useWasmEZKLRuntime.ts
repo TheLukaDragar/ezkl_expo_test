@@ -28,8 +28,8 @@ type EZKL = {
     readonly __wbindgen_free: (a: number, b: number, c: number) => void;
     readonly __wbindgen_realloc: (a: number, b: number, c: number, d: number) => number;
     readonly __wbindgen_exn_store: (a: number) => void;
-    readonly allocate_buffer_u8: (a: number) => number;
-    readonly deallocate_buffer_u8: (a: number, b: number) => void;
+    // readonly allocate_buffer_u8: (a: number) => number;
+    // readonly deallocate_buffer_u8: (a: number, b: number) => void;
     memory: WebAssembly.Memory;
 
 };
@@ -55,6 +55,10 @@ let WASM_VECTOR_LEN = 0;
 function getUint8Memory0() {
     if (cachedUint8Memory0 === null || cachedUint8Memory0.byteLength === 0) {
         // @ts-expect-error
+        const memory: ArrayBuffer | undefined = wasm.memory;
+        console.log('memory 2', memory);
+         // @ts-expect-error
+        console.log('byteLength 2', memory.byteLength);
         cachedUint8Memory0 = new Uint8Array(wasm.memory);
 
         console.log('cachedUint8Memory0 not set, setting to size', cachedUint8Memory0.byteLength);
@@ -81,6 +85,8 @@ function addHeapObject(obj) {
     heap_next = heap[idx];
 
     heap[idx] = obj;
+    console.log('added heap object', idx, obj);
+    console.log('heap', heap);
     return idx;
 }
 // @ts-ignore */
@@ -122,7 +128,7 @@ function passArray8ToWasm0(arg, malloc) {
 
 
 
-    // getUint8Memory0().set(arg, ptr / 1);
+    getUint8Memory0().set(arg, ptr / 1);
     WASM_VECTOR_LEN = arg.length;
     return ptr;
 }
@@ -816,13 +822,13 @@ export function useWasmEZKLRuntime() {
     console.log('useWasmEZKLRuntime');
 
     let im = __wbg_get_imports().wbg;
-    im.memory = new WebAssembly.Memory({ initial: 65536 });
+    // im.memory = new WebAssembly.Memory({ initial: 65536 });
     const module = useWasmUri<EZKL>(
-        'https://github.com/TheLukaDragar/ezkl_expo_test/raw/main/app/sources/ezkl_bg.wasm',
+        'https://github.com/TheLukaDragar/ezkl_expo_test/raw/main/app/sources/ezkl_bg_node.wasm',
         React.useMemo(
             () => ({
 
-                wbg: im,
+                __wbindgen_placeholder__: im,
                 // env: {
                 //   // https://github.com/iden3/circom_runtime/blob/f9de6f7d6efe521b5df6775258779ec9032b5830/js/witness_calculator.js#L27
                 //   memory: new WebAssembly.Memory({ initial: 32767 }),
